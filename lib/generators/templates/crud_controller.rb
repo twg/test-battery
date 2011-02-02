@@ -21,7 +21,7 @@ class <%=controller_class_name%>Controller < ApplicationController
   
   def create
     @<%=model%>.save!
-    flash[:notice] = '<%model_class_name%> created'
+    flash[:notice] = '<%=model_class_name%> created'
     redirect_to :action => :show, :id => @<%=model%>
   rescue ActiveRecord::RecordInvalid
     flash.now[:error] = 'Failed to create <%=model_class_name%>'
@@ -39,7 +39,7 @@ class <%=controller_class_name%>Controller < ApplicationController
   
   def destroy
     @<%=model%>.destroy
-    flash[:notice] = '<%model_class_name%> deleted'
+    flash[:notice] = '<%=model_class_name%> deleted'
     redirect_to :action => :index
   end
   
@@ -50,7 +50,7 @@ protected
   end
   
   def load_<%=model%>
-    @<%=model%> = <%model_class_name%>.find(params[:<%=model%>])
+    @<%=model%> = <%=model_class_name%>.find(params[:<%=model%>])
   rescue ActiveRecord::RecordNotFound
     flash[:error] = '<%=model_class_name%> not found'
     redirect_to :action => :index

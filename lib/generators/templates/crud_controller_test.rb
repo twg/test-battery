@@ -1,6 +1,6 @@
 require File.expand_path('../test_helper', File.dirname(__FILE__))
 
-class <%=controller_class_name%>Test < ActionController::TestCase
+class <%=controller_class_name%>ControllerTest < ActionController::TestCase
   
   def test_get_index
     get :index
@@ -12,7 +12,7 @@ class <%=controller_class_name%>Test < ActionController::TestCase
   def test_get_show
     <%=model%> = <%=models%>(:default)
     get :show, :id => <%=model%>
-    assert assigns(:<%model%>)
+    assert assigns(:<%=model%>)
     assert_response :success
     assert_template :show
   end
@@ -94,7 +94,7 @@ class <%=controller_class_name%>Test < ActionController::TestCase
       delete :destroy, :id => <%=model%>
       assert_response :redirect
       assert_redirected_to :action => :index
-      assert_equal '<%model_class_name%> deleted', :flash[:notice]
+      assert_equal '<%=model_class_name%> deleted', :flash[:notice]
     end
   end
   
