@@ -19,3 +19,4 @@ Controller Crud Generator:
     
     rails g crud_controller kittens
     
+    
