@@ -50,7 +50,7 @@ protected
   end
   
   def load_<%=model%>
-    @<%=model%> = <%=model_class_name%>.find(params[:<%=model%>])
+    @<%=model%> = <%=model_class_name%>.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     flash[:error] = '<%=model_class_name%> not found'
     redirect_to :action => :index
