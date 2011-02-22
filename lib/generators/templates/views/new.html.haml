@@ -1,0 +1,5 @@
+%h1 New <%=model%>
+
+= form_for @<%=model%>, :url => { :action => :create } do |form|
+  = render :partial => 'form', :object => form
+  = form.submit 'Create <%=model%>'

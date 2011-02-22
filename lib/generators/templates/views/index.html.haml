@@ -1,0 +1,13 @@
+%h1 <%=models%>
+
+%table
+  %tr
+    %th <%=model%>
+    %th
+  - @<%=models%>.each do |<%=model%>|
+    %tr
+      %td= debug <%=model%>
+      %td
+        = link_to 'Show', <%=models%>_path
+        = link_to 'Edit', <%=model%>_path(<%=model%>)
+        = link_to 'Delete', <%=model%>_path(<%=model%>), :method => :delete, :confirm => 'Are you sure?'

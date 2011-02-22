@@ -1,0 +1,5 @@
+%h1 Editing <%=model%>
+
+= form_for @<%=model%>, :url => { :action => :update } do |form|
+  = render :partial => 'form', :object => form
+  = form.submit 'Update <%=model%>'

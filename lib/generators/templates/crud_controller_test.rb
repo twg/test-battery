@@ -19,7 +19,7 @@ class <%=controller_class_name%>ControllerTest < ActionController::TestCase
   
   def test_get_show_failure
     get :show, :id => 'invalid'
-    assert_reponse :redirect
+    assert_response :redirect
     assert_redirected_to :action => :index
     assert_equal '<%=model_class_name%> not found', flash[:error]
   end
@@ -60,7 +60,7 @@ class <%=controller_class_name%>ControllerTest < ActionController::TestCase
       }
       assert_response :success
       assert_template :new
-      assert_equal 'Failed to create <%=model_class_name%>'
+      assert_equal 'Failed to create <%=model_class_name%>', flash[:error]
     end
   end
   
@@ -94,7 +94,7 @@ class <%=controller_class_name%>ControllerTest < ActionController::TestCase
       delete :destroy, :id => <%=model%>
       assert_response :redirect
       assert_redirected_to :action => :index
-      assert_equal '<%=model_class_name%> deleted', :flash[:notice]
+      assert_equal '<%=model_class_name%> deleted', flash[:notice]
     end
   end
   
