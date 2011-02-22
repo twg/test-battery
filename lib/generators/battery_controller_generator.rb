@@ -6,7 +6,7 @@ class BatteryControllerGenerator < Rails::Generators::Base
   argument :controller_name, :type => :string
   
   def generate_controller
-    template 'crud_controller.rb', "app/controllers/#{models}_controller.rb"
+    template 'controller.rb', "app/controllers/#{models}_controller.rb"
   end
   
   def generate_views
@@ -18,7 +18,7 @@ class BatteryControllerGenerator < Rails::Generators::Base
   end
   
   def generate_test
-    template 'crud_controller_test.rb', "test/functional/#{models}_controller_test.rb"
+    template 'controller_test.rb', "test/functional/#{models}_controller_test.rb"
   end
   
 private
