@@ -8,6 +8,6 @@
     %tr
       %td= debug <%=model%>
       %td
-        = link_to 'Show', <%=models%>_path
-        = link_to 'Edit', <%=model%>_path(<%=model%>)
+        = link_to 'Show', <%=model%>_path(<%=model%>)
+        = link_to 'Edit', edit_<%=model%>_path(<%=model%>)
         = link_to 'Delete', <%=model%>_path(<%=model%>), :method => :delete, :confirm => 'Are you sure?'

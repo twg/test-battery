@@ -7,7 +7,7 @@ Install
 -------
 
 In your Gemfile:
-
+    
     group :development, :test do
       gem 'test_battery'
     end
