@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{test_battery}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Oleg Khabarov"]
-  s.date = %q{2011-02-02}
+  s.date = %q{2011-02-22}
   s.description = %q{Collection of generators and test helpers}
   s.email = %q{oleg@theworkinggroup.ca}
   s.extra_rdoc_files = [
@@ -24,9 +24,14 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
-    "lib/generators/crud_controller_generator.rb",
+    "lib/generators/battery_controller_generator.rb",
     "lib/generators/templates/crud_controller.rb",
     "lib/generators/templates/crud_controller_test.rb",
+    "lib/generators/templates/views/_form.html.haml",
+    "lib/generators/templates/views/edit.html.haml",
+    "lib/generators/templates/views/index.html.haml",
+    "lib/generators/templates/views/new.html.haml",
+    "lib/generators/templates/views/show.html.haml",
     "lib/test_battery.rb",
     "test/helper.rb",
     "test/test_test_battery.rb",
