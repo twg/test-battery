@@ -17,6 +17,6 @@ Generators
 
 Controller Crud Generator:
     
-    rails g crud_controller kittens
+    rails g battery_controller kittens
     
     
